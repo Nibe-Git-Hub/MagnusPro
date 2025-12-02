@@ -75,6 +75,6 @@ included in the project and what each page/screen is about.
 
 # Reference 
 
-MagnusPro is an Aeronautical Engineering Licensure Examination Reviewer in the P.
+Magnus Technologies Inc. is a company owned by my Father.
 
-https://www.facebook.com/MagnusPr0/
+https://www.linkedin.com/company/magnus-tech-ph/
