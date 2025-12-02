@@ -1,50 +1,49 @@
-import React from 'react'
-import logo from '../data.js'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import logoData from '../data.js';
+import { Link } from 'react-router-dom';
+import { Navbar, Nav, Container } from 'react-bootstrap'; 
 
 function Header() {
   return (
-    <nav className="navbar navbar-expand-lg bg-dark border-bottom border-light" data-bs-theme="dark">
-      <div className="container-fluid">
-        <Link to='/' className="navbar-brand" href="#">
+    <Navbar 
+      bg="dark" 
+      variant="dark" 
+      expand="lg" 
+      collapseOnSelect 
+      className="border-bottom border-light"
+    >
+      <Container>
+        <Navbar.Brand as={Link} to='/'>
           <img 
-            src={logo.logo[0].image} 
+            src={logoData.logo[0].image} 
             alt="Logo" 
             width="30" 
             height="30" 
             className="d-inline-block align-text-top me-2 rounded-circle" 
           />
           Magnus Technologies Inc.
-        </Link>
+        </Navbar.Brand>
 
-        <button 
-          className="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarNav" 
-          aria-controls="navbarNav" 
-          aria-expanded="false" 
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto"> {/* 'ms-auto' pushes links to the right */}
-            <li className="nav-item">
-              <Link to='/' className="nav-link active" aria-current="page" href="#">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link to='/about' className="nav-link" href="#">About</Link>
-            </li>
-            <li className="nav-item">
-              <Link to='/contact' className="nav-link" href="#">Contact</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  )
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="ms-auto"> 
+            <Nav.Link as={Link} to='/'>
+              Home
+            </Nav.Link>
+
+            <Nav.Link as={Link} to='/about'>
+              About
+            </Nav.Link>
+
+            <Nav.Link as={Link} to='/contact'>
+              Contact
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 
-export default Header
+export default Header;

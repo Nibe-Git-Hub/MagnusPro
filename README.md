@@ -71,7 +71,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # Routes
 
-included in the project and what each page/screen is about.
+/ - Landing Page (who they are, what do they do, the team, etc)
 
 # Reference 
 
